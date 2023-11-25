@@ -46,7 +46,7 @@ public class DetailActivity extends AppCompatActivity {
         } else if (contentText.contains("불안")) {
             detailemotion.setImageResource(R.drawable.ic_anxiety);
         } else {
-            // 기본 이미지 또는 다른 처리를 원하는 대로 설정할 수 있습니다.
+
             detailemotion.setImageResource(R.drawable.ic_happy);
         }
 
