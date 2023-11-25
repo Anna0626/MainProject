@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         mainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // mainbtn을 클릭하면 WriteActivity로 이동하는 코드를 작성합니다.
+
                 Intent intent = new Intent(MainActivity.this, WriteActivity.class);
                 startActivity(intent);
             }

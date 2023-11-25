@@ -1,7 +1,5 @@
 package kr.ac.duksung.mainproject;
 
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -23,22 +21,18 @@ public class DetailActivity extends AppCompatActivity {
         emotiontext = findViewById(R.id.emotiontext);
         detaildate = findViewById(R.id.detaildate);
         detailcontent = findViewById(R.id.detailcontent);
-        detailemotion = findViewById(R.id.detailemotion); // 이미지뷰 초기화
+        detailemotion = findViewById(R.id.detailemotion);
         detailbtn1 = findViewById(R.id.detailbtn1);
         detailbtn2 = findViewById(R.id.detailbtn2);
 
-        // WriteActivity에서 전달한 Intent를 받아옴
         Intent intent = getIntent();
 
-        // WriteActivity에서 전달한 'content'와 'date'를 받아옵니다.
         String contentText = intent.getStringExtra("content");
         String dateText = intent.getStringExtra("date");
 
-        // 'content'와 'date'를 각각의 TextView에 설정합니다.
         detailcontent.setText(contentText);
         detaildate.setText(dateText);
 
-        // 'content' 내용이 "기쁨"이면 'happy_image', 그렇지 않으면 'sad_image'를 보여줍니다.
         if (contentText.contains("기쁨")) {
             detailemotion.setImageResource(R.drawable.ic_happy);
         } else if (contentText.contains("슬픔")) {
